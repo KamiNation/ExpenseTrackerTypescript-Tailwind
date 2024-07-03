@@ -15,7 +15,7 @@ const ExpenseContextProvider: React.FC<PropsWithChildren> = ({ children }) => {
     });
 
     useEffect(() => {
-        console.log('Updated formExpenseData:', formExpenseData);
+        // console.log('Updated formExpenseData:', formExpenseData);
     }, [formExpenseData]);
 
 

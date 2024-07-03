@@ -1,6 +1,7 @@
 import {
     useContext, 
-    useState, useEffect
+    useState, 
+    // useEffect
 } from "react";
 import {
     FormInterface,
@@ -42,9 +43,9 @@ const ExpenseForm: React.FC<onCancelFromNewExpense> = ({ onCancel }) => {
     }
 
 
-    useEffect(() => {
-        console.log('Form userDetails =>:', userDetails);
-    }, [userDetails]);
+    // useEffect(() => {
+    //     console.log('Form userDetails =>:', userDetails);
+    // }, [userDetails]);
 
 
 
@@ -63,7 +64,8 @@ const ExpenseForm: React.FC<onCancelFromNewExpense> = ({ onCancel }) => {
                     date: ''
                 })
             } else {
-                console.log("Pls fill all fields");
+                alert("Please fill all fields")
+                // console.log("Pls fill all fields");
 
             }
         } catch (error) {
@@ -119,7 +121,7 @@ const ExpenseForm: React.FC<onCancelFromNewExpense> = ({ onCancel }) => {
                 <div className="p-4 flex items-end justify-end md:justify-center md:items-center">
                     <div>
                         <button type="button" onClick={onCancel} className="text-customPurpleBgColor pr-8">Cancel</button>
-                        <button type="submit" onClick={(e) => console.log(e.type)} className="p-4 rounded-xl bg-customPurpleBgColor text-white">Add Expense</button>
+                        <button type="submit"  className="p-4 rounded-xl bg-customPurpleBgColor text-white">Add Expense</button>
                     </div>
                 </div>
             </form>

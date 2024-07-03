@@ -30,7 +30,7 @@ const ExpenseMap: React.FC = () => {
                     amount: amount,
                     date: new Date(date)
                 };
-                console.log(newExpense);
+                // console.log(newExpense);
                 return [newExpense, ...prevState]
             });
         }
